@@ -1,0 +1,13 @@
+# 报告与日志
+reports/
+logs/
+docs/
+*.log
+.pytest_cache/
+__pycache__/
+*.pyc
+.eggs/
+*.egg-info/
+.venv/
+venv/
+env/
