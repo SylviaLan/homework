@@ -127,7 +127,7 @@ class TestGetCandlestickAbnormal:
     """public/get-candlestick 异常入参测试（GC-010 ~ GC-015）"""
 
     @allure.title("GC-010~012 异常 instrument_name（缺参/空串/非法），校验 HTTP 与 biz_code")
-    @allure.severity(allure.severity_level.NORMAL)
+    @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.P1
     @pytest.mark.parametrize(
         "case",
