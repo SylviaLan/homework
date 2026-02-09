@@ -98,6 +98,14 @@ LOG_LEVEL=DEBUG pytest -v
 
 # 组合使用
 TEST_ENV=uat LOG_LEVEL=DEBUG pytest -m "rest and P0" -v
+
+# 并行执行（需安装 pytest-xdist）
+pytest -n 4                     # 4 个进程并发
+pytest -n auto                  # 自动检测 CPU 核数
+pytest -n 4 --dist=loadfile     # 按文件分发，同文件用例串行（推荐 WebSocket 用例）
+
+# 并行 + 环境 + 报告
+TEST_ENV=uat pytest -n 4 -m P0 --alluredir=reports/allure-results
 ```
 
 ## 查看 Allure 报告
