@@ -88,6 +88,16 @@ pytest -m "not abnormal"
 
 # 仅冒烟用例
 pytest -m smoke
+
+# 指定环境运行（TEST_ENV 可选值：test / uat / prod）
+TEST_ENV=uat pytest -v
+TEST_ENV=uat pytest -m P0 -v
+
+# 指定日志级别
+LOG_LEVEL=DEBUG pytest -v
+
+# 组合使用
+TEST_ENV=uat LOG_LEVEL=DEBUG pytest -m "rest and P0" -v
 ```
 
 ## 查看 Allure 报告
